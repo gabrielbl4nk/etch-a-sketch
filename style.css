@@ -12,6 +12,7 @@ body {
 }
 
 .main {
+  margin-top: 1rem;
   border: 1px solid red;
   display: flex;
   flex-flow: row wrap;
@@ -70,4 +71,9 @@ body {
 
 .white {
   background-color: white;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
 }
