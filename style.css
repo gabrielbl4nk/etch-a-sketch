@@ -3,6 +3,14 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: #f0f2f5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+p {
+  font-size: 2rem;
+  margin: 5px;
 }
 
 .main div {
@@ -16,8 +24,15 @@ body {
   border: 1px solid red;
   display: flex;
   flex-flow: row wrap;
-  height: 960px;
-  width: 960px;
+  height: auto;
+  width: 90dvw;
+  max-width: 960px;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .colorsel {
@@ -30,8 +45,9 @@ body {
 .colors {
   display: flex;
   border: 1px solid black;
-  padding: 5px;
-  gap: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  gap: 10px;
   margin-bottom: 15px;
 }
 
@@ -39,41 +55,70 @@ body {
   width: 50px;
   height: 50px;
   border: 2px solid gray;
+  border-radius: 6px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
-.black {
+.colors div:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.colors div.selected {
+  transform: scale(1.1);
+  outline: 1px solid #444;
+}
+
+#black {
   background-color: black;
 }
 
-.red {
+#red {
   background-color: red;
 }
 
-.lightblue {
+#lightblue {
   background-color: lightskyblue;
 }
 
-.green {
+#green {
   background-color: green;
 }
 
-.yellow {
+#yellow {
   background-color: yellow;
 }
 
-.purple {
+#purple {
   background-color: purple;
 }
 
-.orange {
+#orange {
   background-color: orange;
 }
 
-.white {
+#white {
   background-color: white;
 }
 
 .buttons {
   display: flex;
   gap: 0.5rem;
+}
+
+.buttons button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2b7a78;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.buttons button:hover {
+  background-color: #205e5d;
 }

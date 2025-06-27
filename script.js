@@ -1,7 +1,7 @@
 const main = document.querySelector(".main");
 const body = document.querySelector("body");
 const colors = document.querySelector(".colors");
-const black = document.querySelector(".black");
+const black = document.querySelector("#black");
 const gridButton = document.querySelector(".button");
 const resetButton = document.querySelector(".resetbutton");
 
@@ -26,16 +26,16 @@ main.style.cursor = "crosshair";
 
 const selectColor = (elem) => {
   if (selected) {
-    selected.style.transform = "scale(1)";
+    selected.classList.remove("selected");
   }
-  elem.style.transform = "scale(1.1)";
+  elem.classList.add("selected");
   selected = elem;
 };
 
 selectColor(black);
 
 const paintSquare = (elem) => {
-  elem.style.backgroundColor = selected.getAttribute("class");
+  elem.style.backgroundColor = selected.id;
   if (parseFloat(elem.style.opacity) >= 1) {
     return;
   }
@@ -43,7 +43,6 @@ const paintSquare = (elem) => {
 };
 
 colors.addEventListener("click", (event) => {
-  console.log(event.target);
   if (event.target != colors) {
     selectColor(event.target);
   }
