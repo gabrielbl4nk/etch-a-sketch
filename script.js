@@ -1,12 +1,14 @@
 const main = document.querySelector(".main");
 const body = document.querySelector("body");
 const colors = document.querySelector(".colors");
-const black = document.querySelector("#black");
+const black = document.querySelector(".black");
 const gridButton = document.querySelector(".button");
 const resetButton = document.querySelector(".resetbutton");
+const colorPicker = document.querySelector(".colorPicker");
 
 let isMouseDown = false;
 let selected = null;
+let currColor = "black";
 
 const userSize = (size) => {
   main.innerHTML = "";
@@ -30,12 +32,17 @@ const selectColor = (elem) => {
   }
   elem.classList.add("selected");
   selected = elem;
+  if (elem.getAttribute("name") === "colorPicker") {
+    currColor = elem.value;
+    return;
+  }
+  currColor = selected.getAttribute("class").split(" ")[0];
 };
 
 selectColor(black);
 
 const paintSquare = (elem) => {
-  elem.style.backgroundColor = selected.id;
+  elem.style.backgroundColor = currColor;
   if (parseFloat(elem.style.opacity) >= 1) {
     return;
   }
@@ -47,6 +54,14 @@ colors.addEventListener("click", (event) => {
     selectColor(event.target);
   }
 });
+
+const handlePickerSelection = (event) => {
+  selectColor(event.target);
+};
+
+colorPicker.addEventListener("input", (event) => handlePickerSelection(event));
+
+colorPicker.addEventListener("click", (event) => handlePickerSelection(event));
 
 main.addEventListener("mousedown", (event) => {
   isMouseDown = true;

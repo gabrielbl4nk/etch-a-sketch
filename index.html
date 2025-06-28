@@ -3,21 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Etch-A-Sketch gabrielblank</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="colorsel">
-      <p>Click on a color to select it</p>
-      <div class="colors">
-        <div id="black" title="Black"></div>
-        <div id="red" title="Red"></div>
-        <div id="lightblue" title="Light Blue"></div>
-        <div id="green" title="Green"></div>
-        <div id="yellow" title="Yellow"></div>
-        <div id="purple" title="Purple"></div>
-        <div id="orange" title="Orange"></div>
-        <div id="white" title="White"></div>
+    <div class="topPanel">
+      <h1 class="title">🎨 Etch-A-Sketch do garbielblnak</h1>
+      <div class="colorPickerDiv">
+        <label for="colorPicker">Escolha sua cor:</label>
+        <input
+          type="color"
+          class="colorPicker"
+          name="colorPicker"
+          value="#000000"
+        />
+      </div>
+      <p>ou escolha uma cor rápida</p>
+      <div class="colorsel">
+        <div class="colors">
+          <div class="black" title="Black"></div>
+          <div class="red" title="Red"></div>
+          <div class="lightblue" title="Light Blue"></div>
+          <div class="green" title="Green"></div>
+          <div class="yellow" title="Yellow"></div>
+          <div class="purple" title="Purple"></div>
+          <div class="orange" title="Orange"></div>
+          <div class="white" title="White"></div>
+        </div>
       </div>
     </div>
     <div class="buttons">
