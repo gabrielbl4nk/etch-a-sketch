@@ -52,7 +52,6 @@ body {
   border-radius: 5px;
   padding: 10px;
   gap: 10px;
-  margin-bottom: 15px;
 }
 
 .colors div {
@@ -158,7 +157,7 @@ body {
   flex-direction: column;
   align-items: center;
   background: linear-gradient(120deg, #6a11cb, #2575fc);
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
   margin-top: 0.75rem;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
@@ -183,7 +182,7 @@ body {
 
 .grid-size-display {
   font-size: 20px;
-  margin-top: 18px;
+  margin: 2rem;
   color: #e3f7f6;
   font-weight: bold;
 }
