@@ -49,6 +49,10 @@ selectColor(black);
 
 const paintSquare = (elem) => {
   elem.style.backgroundColor = currColor;
+  if (currColor === "white" || currColor === "#ffffff") {
+    elem.style.opacity = "0";
+    return;
+  }
   if (parseFloat(elem.style.opacity) >= 1) {
     return;
   }
