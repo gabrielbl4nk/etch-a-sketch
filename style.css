@@ -8,12 +8,13 @@ body {
   color: #333;
 }
 
-p {
+.or-text {
   margin: 0.5rem 0;
   font-style: italic;
   font-size: 14px;
   color: #555;
   text-align: center;
+  color: #e3f7f6;
 }
 
 .main div {
@@ -180,6 +181,9 @@ p {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
 }
 
-p {
+.grid-size-display {
+  font-size: 20px;
+  margin-top: 18px;
   color: #e3f7f6;
+  font-weight: bold;
 }

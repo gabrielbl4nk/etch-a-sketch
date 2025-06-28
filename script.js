@@ -5,10 +5,15 @@ const black = document.querySelector(".black");
 const gridButton = document.querySelector(".button");
 const resetButton = document.querySelector(".resetbutton");
 const colorPicker = document.querySelector(".colorPicker");
+const gridSizeDisplay = document.querySelector(".grid-size-display");
 
 let isMouseDown = false;
 let selected = null;
 let currColor = "black";
+
+const updateGridSizeText = (size) => {
+  gridSizeDisplay.innerText = `Tamanho da grade: ${size} x ${size}`;
+};
 
 const userSize = (size) => {
   main.innerHTML = "";
@@ -20,6 +25,7 @@ const userSize = (size) => {
     div.style.height = `${960 / size}px`;
     main.appendChild(div);
   }
+  updateGridSizeText(size);
 };
 
 userSize(16);
